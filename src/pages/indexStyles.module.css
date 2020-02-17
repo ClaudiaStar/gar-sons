@@ -1,0 +1,17 @@
+.heroImg {
+  height: 80vh;
+}
+
+.heroText {
+  position: absolute;
+  top: 30vh;
+  text-align: center;
+  width: 600px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  background-color: #0000008a;
+  padding-top: 20px;
+}
