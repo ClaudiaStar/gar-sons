@@ -6,9 +6,9 @@ import aboutStyles from "./aboutStyles.module.css"
 
 import AboutImg from "../components/aboutImg"
 
-const SecondPage = () => (
+const AboutPage = () => (
   <Layout>
-    <SEO title="Page two" />
+    <SEO title="About Gar-Sons" />
     <AboutImg />
     <div className={aboutStyles.aboutDescription}>
       <h2>ABOUT GAR-SONS</h2>
@@ -42,4 +42,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default AboutPage
