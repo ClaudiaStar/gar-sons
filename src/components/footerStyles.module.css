@@ -1,0 +1,26 @@
+.Footer {
+  border-top: 1px solid #000000;
+  bottom: 0;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: small;
+  padding-bottom: 15px;
+}
+
+.SocialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.SocialIcons i {
+  padding: 10px 30px;
+}
+
+@media /* desktop */ (min-width: 769px) {
+  .SocialIcons {
+    grid-template-columns: 10fr 1fr 1fr 1fr 10fr;
+  }
+}

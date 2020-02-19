@@ -1,5 +1,6 @@
 .heroImg {
   height: 80vh;
+  width: 100vw;
 }
 
 .heroText {
@@ -14,4 +15,10 @@
   color: #ffffff;
   background-color: #0000008a;
   padding-top: 20px;
+}
+
+@media screen and (max-device-width: 725px) {
+  .heroText {
+    width: 90vw;
+  }
 }

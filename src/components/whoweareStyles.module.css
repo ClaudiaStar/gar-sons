@@ -1,0 +1,21 @@
+.Main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  margin: 100px;
+}
+
+.text {
+  width: 500px;
+}
+
+@media screen and (max-device-width: 725px) {
+  .Main {
+    margin: 100px 20px;
+  }
+
+  .text {
+    width: 90vw;
+    margin-top: 20px;
+  }
+}

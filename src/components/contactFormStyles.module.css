@@ -1,0 +1,114 @@
+h2 {
+  grid-area: header;
+}
+
+.FirstName {
+  grid-area: first-name;
+}
+
+.LastName {
+  grid-area: last-name;
+}
+
+.Email {
+  grid-area: email;
+}
+
+.Phone {
+  grid-area: telephone;
+}
+
+.Message {
+  grid-area: message;
+}
+
+.Submit {
+  grid-area: submit;
+  width: 50%;
+  align-self: left;
+}
+
+.ContactForm {
+  display: grid;
+  grid-template-columns: 2.4fr 2fr 2fr 2.4fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". header header ."
+    ". first-name last-name ."
+    ". email telephone ."
+    ". message message ."
+    ". submit . .";
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  padding: 100px 0 150px 0;
+}
+
+.ContactForm > div {
+  transition: 0.5s;
+}
+
+input {
+  width: 100%;
+  padding: 5px 5px;
+  border: 0px;
+  border-bottom: 2px solid #000000;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 5px 5px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+button {
+  cursor: pointer;
+  border: 2px solid #000000;
+  float: left;
+  background: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 600;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  color: #ffffff;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #000000;
+  z-index: -1;
+  transition: 0.8s;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+button:hover::before {
+  height: 180%;
+}
+
+@media screen and (max-device-width: 725px) {
+  .ContactForm {
+    grid-template-columns: 0.3fr 2fr 2fr 0.3fr;
+    grid-template-areas:
+      ". header header ."
+      ". first-name first-name ."
+      ". last-name last-name ."
+      ". email email ."
+      ". telephone telephone ."
+      ". message message ."
+      ". submit . .";
+    padding: 50px 0 150px 0;
+  }
+}

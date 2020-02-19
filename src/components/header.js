@@ -12,7 +12,7 @@ const Header = () => (
           textDecoration: `none`,
         }}
       >
-        Gar-Sons
+        Gar-Sons Constrution
       </Link>
     </div>
 

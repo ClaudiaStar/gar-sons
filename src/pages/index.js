@@ -5,6 +5,10 @@ import indexStyles from "./indexStyles.module.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import WhoWeAre from "../components/whoweare"
+import TransitionImg1 from "../components/TransitionImg1"
+import Services from "../components/services"
+import TransitionImg2 from "../components/TransitionImg2"
 
 const IndexPage = ({ data }) => {
   return (
@@ -20,13 +24,17 @@ const IndexPage = ({ data }) => {
         <h1>Gar-Sons Construction</h1>
         <p>Licensed | Bonded | Insured</p>
       </div>
+      <WhoWeAre />
+      <TransitionImg1 />
+      <Services />
+      <TransitionImg2 />
     </Layout>
   )
 }
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "hero-img.jpg" }) {
+    file(relativePath: { eq: "bricklight.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid

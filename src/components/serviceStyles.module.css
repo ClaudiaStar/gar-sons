@@ -1,0 +1,37 @@
+.serviceHeading {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.serviceCards {
+  display: flex;
+  margin: 100px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.serviceCards div {
+  width: 30vw;
+  padding: 10px;
+  color: #000000;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  line-height: 25px;
+  font-weight: 600;
+  border-radius: 0.5em;
+  box-shadow: -10px -10px 10px 0 rgba(255, 255, 255, 1),
+    10px 10px 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  margin: 30px;
+}
+
+@media screen and (max-device-width: 725px) {
+  .serviceCards {
+    width: 100vw;
+    margin: auto;
+    padding: 0 0 100px 0;
+  }
+  .serviceCards div {
+    width: 90%;
+  }
+}
