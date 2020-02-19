@@ -15,10 +15,6 @@
   justify-content: center;
 }
 
-.SocialIcons i {
-  padding: 10px 30px;
-}
-
 @media /* desktop */ (min-width: 769px) {
   .SocialIcons {
     grid-template-columns: 10fr 1fr 1fr 1fr 10fr;
