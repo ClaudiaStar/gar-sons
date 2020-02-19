@@ -1,39 +1,102 @@
-.navbar {
-  display: grid;
-  grid-template-columns: 2fr 5fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "logo . about gallery contact";
-  align-items: center;
-  padding: 20px 0;
-  position: fixed;
+/* General Menu Classes */
+
+.Menu {
+  display: none;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30vh 10vh 10vh 10vh 40vh;
+  grid-template-areas: "name" "home" "programs" "contact" ".";
   top: 0;
-  z-index: 1;
-  width: 100vw;
-  background-color: #0000008a;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  background-color: #006400e6;
+  color: #ffffff;
 }
 
-.logo {
-  grid-area: logo;
-  justify-self: start;
-}
-
-.about {
-  grid-area: about;
-}
-
-.gallery {
-  grid-area: gallery;
-}
-
-.contact {
-  grid-area: contact;
-}
-
-.navbar > div {
+.Menu div {
+  align-self: center;
   justify-self: center;
 }
 
-.navbar > div a {
-  text-decoration: none;
-  color: #ffffff;
+.Name {
+  font-family: "Molle", cursive;
+  font-size: x-large;
+  grid-area: name;
+  justify-self: center;
+}
+
+.HomeLink {
+  grid-area: home;
+}
+
+.ProgramsLink {
+  grid-area: programs;
+}
+
+.ContactLink {
+  grid-area: contact;
+}
+
+.Menu.Opened {
+  display: grid;
+}
+
+.Burger {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  z-index: 200;
+  display: block;
+  cursor: pointer;
+  border: 1px solid #d4bf91;
+  border-radius: 5px;
+  outline: inherit;
+  background-color: white;
+}
+
+.Lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.Line {
+  width: 15px;
+  height: 1px;
+  display: block;
+  background-color: #424242;
+  margin: 3px auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.Burger.isActive .Line:nth-child(2) {
+  opacity: 0;
+}
+.Burger.isActive .Line:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+.Burger.isActive .Line:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+/* Large screen styles */
+
+@media /* desktop */ (min-width: 995px) {
+  .Burger {
+    display: none;
+  }
+  .Menu {
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 4fr 1fr 1fr 1fr 0.2fr;
+    grid-template-rows: 10vh;
+    grid-template-areas: ". name . home programs contact .";
+    background-color: #3a473d8a;
+  }
+
+  .Name {
+    justify-self: start;
+  }
 }

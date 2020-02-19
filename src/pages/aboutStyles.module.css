@@ -1,0 +1,13 @@
+.aboutDescription {
+  padding: 50px 10% 100px;
+}
+
+.aboutDescription h2 {
+  text-align: center;
+}
+
+@media screen and (max-device-width: 725px) {
+  .aboutDescription {
+    padding: 40px 10%;
+  }
+}
