@@ -18,7 +18,7 @@ const GarSonsLogo = props => {
   return (
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
-      style={props.style}
+      style={{ width: "400px" }}
     />
   )
 }

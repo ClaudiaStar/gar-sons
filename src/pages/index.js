@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import indexStyles from "./indexStyles.module.css"
+import { motion } from "framer-motion"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -9,6 +10,27 @@ import WhoWeAre from "../components/whoweare"
 import TransitionImg1 from "../components/TransitionImg1"
 import Services from "../components/services"
 import TransitionImg2 from "../components/TransitionImg2"
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.3,
+      when: "beforeChildren",
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+}
 
 const IndexPage = ({ data }) => {
   return (
@@ -19,11 +41,16 @@ const IndexPage = ({ data }) => {
         className={indexStyles.heroImg}
         alt="rustic wood"
       />
-      <div className={indexStyles.heroText}>
-        <h3>Repair - Remodel - Rebuild</h3>
-        <h1>Gar-Sons Construction</h1>
-        <p>Licensed | Bonded | Insured</p>
-      </div>
+      <motion.div
+        className={indexStyles.heroText}
+        variants={container}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.h3 variants={item}>Repair - Remodel - Rebuild</motion.h3>
+        <motion.h1 variants={item}>Gar-Sons Construction</motion.h1>
+        <motion.p variants={item}>Licensed | Bonded | Insured</motion.p>
+      </motion.div>
       <WhoWeAre />
       <TransitionImg1 />
       <Services />

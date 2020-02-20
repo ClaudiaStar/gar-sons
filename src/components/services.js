@@ -1,5 +1,6 @@
 import React from "react"
 import serviceStyles from "./serviceStyles.module.css"
+import { motion, useViewportScroll } from "framer-motion"
 
 import { GiHouse } from "react-icons/gi"
 import { GiFruitTree } from "react-icons/gi"
@@ -15,7 +16,14 @@ const Services = () => {
         <p>We offer a wide range of services to meet every type of need!</p>
       </div>
       <div className={serviceStyles.serviceCards}>
-        <div>
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+          }}
+          whileTap={{
+            scale: 1.1,
+          }}
+        >
           <IconContext.Provider
             value={{
               color: "green",
@@ -27,8 +35,15 @@ const Services = () => {
 
           <h3>Remodels</h3>
           <p>Turn a Pinterest idea into reality!</p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+          }}
+          whileTap={{
+            scale: 1.1,
+          }}
+        >
           <IconContext.Provider
             value={{
               color: "green",
@@ -39,8 +54,15 @@ const Services = () => {
           </IconContext.Provider>
           <h3>Landscaping</h3>
           <p>Don't have a green thumb? We can help!</p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+          }}
+          whileTap={{
+            scale: 1.1,
+          }}
+        >
           <IconContext.Provider
             value={{
               color: "green",
@@ -51,8 +73,15 @@ const Services = () => {
           </IconContext.Provider>
           <h3>Decks and Fences</h3>
           <p>From wood, brick or steel, we can build it!</p>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          whileHover={{
+            scale: 1.1,
+          }}
+          whileTap={{
+            scale: 1.1,
+          }}
+        >
           <IconContext.Provider
             value={{
               color: "green",
@@ -63,7 +92,7 @@ const Services = () => {
           </IconContext.Provider>
           <h3>Emergency Repairs</h3>
           <p>No job too small!</p>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

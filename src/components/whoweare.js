@@ -17,7 +17,7 @@ const WhoWeAre = () => {
         <Button innerText="Learn More" />
       </div>
 
-      <GarSonsLogo style={{ width: "400px" }} />
+      <GarSonsLogo />
     </div>
   )
 }
