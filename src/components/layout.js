@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { TransitionPortal } from "gatsby-plugin-transition-link"
 
 import Header from "./header"
 import Footer from "./footer"
@@ -18,17 +19,22 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+    <React.Fragment>
+      <TransitionPortal>
+        <Header siteTitle={data.site.siteMetadata.title} />
+      </TransitionPortal>
+
       <div
         style={{
           margin: `0 auto`,
         }}
       >
         <main>{children}</main>
-        <Footer />
+        <TransitionPortal>
+          <Footer />
+        </TransitionPortal>
       </div>
-    </>
+    </React.Fragment>
   )
 }
 

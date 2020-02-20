@@ -1,5 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import classes from "./headerStyles.module.css"
 
@@ -45,34 +47,47 @@ const Header = () => {
         onClick={handleMenuClicked}
       >
         <div className={classes.Name}>
-          <Link
+          <AniLink
+            fade
             to="/"
+            duration={1}
             exact={true}
             style={linkStyle}
             activeStyle={activeLinkStyle}
           >
             Gar-Sons Construction
-          </Link>
+          </AniLink>
         </div>
         <div className={classes.HomeLink}>
-          <Link
+          <AniLink
+            fade
             to="/about"
             exact={true}
             style={linkStyle}
             activeStyle={activeLinkStyle}
           >
             About Us
-          </Link>
+          </AniLink>
         </div>
         <div className={classes.ProgramsLink}>
-          <Link to="/gallery" style={linkStyle} activeStyle={activeLinkStyle}>
+          <AniLink
+            fade
+            to="/gallery"
+            style={linkStyle}
+            activeStyle={activeLinkStyle}
+          >
             Gallery
-          </Link>
+          </AniLink>
         </div>
         <div className={classes.ContactLink}>
-          <Link to="/contact" style={linkStyle} activeStyle={activeLinkStyle}>
+          <AniLink
+            fade
+            to="/contact"
+            style={linkStyle}
+            activeStyle={activeLinkStyle}
+          >
             Contact Us
-          </Link>
+          </AniLink>
         </div>
       </div>
     </header>

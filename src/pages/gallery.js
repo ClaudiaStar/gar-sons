@@ -8,6 +8,7 @@ const GalleryPage = () => (
     <SEO title="Gallery" />
     <div className={galleryStyles.gallery}>
       <h2>OUR WORK</h2>
+      <div className={galleryStyles.galleryImages}></div>
     </div>
   </Layout>
 )
