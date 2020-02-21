@@ -1,6 +1,6 @@
 import React from "react"
 import serviceStyles from "./serviceStyles.module.css"
-import { motion, useViewportScroll } from "framer-motion"
+import { motion } from "framer-motion"
 
 import { GiHouse } from "react-icons/gi"
 import { GiFruitTree } from "react-icons/gi"

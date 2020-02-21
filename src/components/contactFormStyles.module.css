@@ -29,8 +29,9 @@ h2 {
 }
 
 .ContactForm {
+  width: 50vw;
   display: grid;
-  grid-template-columns: 2.4fr 2fr 2fr 2.4fr;
+  grid-template-columns: 0.5fr 2fr 2fr 0.5fr;
   grid-template-rows: auto;
   grid-template-areas:
     ". header header ."
@@ -52,6 +53,7 @@ input {
   padding: 5px 5px;
   border: 0px;
   border-bottom: 2px solid #000000;
+  background-color: #ffffff8a;
 }
 
 textarea {
@@ -61,6 +63,7 @@ textarea {
   border: 2px solid #000000;
   border-radius: 5px;
   margin-top: 5px;
+  background-color: #ffffff8a;
 }
 
 button {
@@ -109,6 +112,6 @@ button:hover::before {
       ". telephone telephone ."
       ". message message ."
       ". submit . .";
-    padding: 50px 0 150px 0;
+    padding: 50px 0 70px 0;
   }
 }

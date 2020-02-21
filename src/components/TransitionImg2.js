@@ -1,7 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import ContactForm from "./contactForm"
 
 const TransitionImg2 = () => {
   const data = useStaticQuery(graphql`
@@ -22,8 +21,6 @@ const TransitionImg2 = () => {
         fluid={data.placeholderImage.childImageSharp.fluid}
         style={{ height: "40vh", opacity: "0.5" }}
       />
-
-      <ContactForm />
     </React.Fragment>
   )
 }
