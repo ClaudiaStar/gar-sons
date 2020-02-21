@@ -11,6 +11,14 @@ const linkStyle = {
   fontWeight: 800,
 }
 
+const contactLinkStyle = {
+  textDecoration: "none",
+  color: "#000000",
+  backgroundColor: "#ffffff",
+  fontWeight: 900,
+  padding: "10px",
+}
+
 const activeLinkStyle = {
   fontSize: "1.2em",
   textDecoration: "underline",
@@ -47,14 +55,7 @@ const Header = () => {
         onClick={handleMenuClicked}
       >
         <div className={classes.Name}>
-          <AniLink
-            fade
-            to="/"
-            duration={1}
-            exact={true}
-            style={linkStyle}
-            activeStyle={activeLinkStyle}
-          >
+          <AniLink fade to="/" duration={1} exact={true} style={linkStyle}>
             Gar-Sons Construction
           </AniLink>
         </div>
@@ -83,7 +84,7 @@ const Header = () => {
           <AniLink
             fade
             to="/contact"
-            style={linkStyle}
+            style={contactLinkStyle}
             activeStyle={activeLinkStyle}
           >
             Contact Us

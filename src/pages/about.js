@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import aboutStyles from "./aboutStyles.module.css"
 
 import AboutImg from "../components/aboutImg"
+import CallToAction from "../components/callToAction"
 
 const AboutPage = () => (
   <Layout>
@@ -39,6 +40,7 @@ const AboutPage = () => (
         <li>Kitchen and bathroom fixture installation/remodel</li>
       </ul>
     </div>
+    <CallToAction />
   </Layout>
 )
 

@@ -9,7 +9,7 @@ import SEO from "../components/seo"
 import WhoWeAre from "../components/whoweare"
 import TransitionImg1 from "../components/TransitionImg1"
 import Services from "../components/services"
-import TransitionImg2 from "../components/TransitionImg2"
+import CallToAction from "../components/callToAction"
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -48,13 +48,15 @@ const IndexPage = ({ data }) => {
         animate="visible"
       >
         <motion.h3 variants={item}>Repair - Remodel - Rebuild</motion.h3>
-        <motion.h1 variants={item}>Gar-Sons Construction</motion.h1>
+        <motion.h1 variants={item} className={indexStyles.companyName}>
+          Gar-Sons Construction
+        </motion.h1>
         <motion.p variants={item}>Licensed | Bonded | Insured</motion.p>
       </motion.div>
       <WhoWeAre />
       <TransitionImg1 />
       <Services />
-      <TransitionImg2 />
+      <CallToAction />
     </Layout>
   )
 }

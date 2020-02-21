@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import galleryStyles from "./galleryStyles.module.css"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import CallToAction from "../components/callToAction"
 
 const GalleryPage = props => {
   return (
@@ -48,6 +49,7 @@ const GalleryPage = props => {
           <Img fixed={props.data.imageSixteen.childImageSharp.fixed} />
         </div>
       </div>
+      <CallToAction />
     </Layout>
   )
 }
