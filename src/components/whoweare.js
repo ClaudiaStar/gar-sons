@@ -14,7 +14,7 @@ const WhoWeAre = () => {
           drywall and floor installation to a full bathroom remodel or new porch
           addition. We can also help with landscape design.
         </p>
-        <Button innerText="Learn More" />
+        <Button innerText="Learn More" link="/about" />
       </div>
 
       <GarSonsLogo />
