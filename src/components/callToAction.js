@@ -1,7 +1,7 @@
 import React from "react"
 import TransitionImg2 from "../components/TransitionImg2"
 import Button from "../components/button"
-import callToActionStyles from "./callToActionStyles.module.css"
+import callToActionStyles from "./calltoActionStyles.module.css"
 
 const CallToAction = () => {
   return (
