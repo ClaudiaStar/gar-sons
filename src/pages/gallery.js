@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import galleryStyles from "./galleryStyles.module.css"
@@ -7,6 +7,8 @@ import Img from "gatsby-image"
 import CallToAction from "../components/callToAction"
 
 const GalleryPage = props => {
+  const [period, setPeriod] = useState("after")
+
   return (
     <Layout>
       <SEO title="Gallery" />
@@ -19,17 +21,33 @@ const GalleryPage = props => {
           projects. Take a look at our before & after photos!
         </p>
         <div className={galleryStyles.bathroomImages}>
-          <h3>Bathroom remodels</h3>
-          <Img fixed={props.data.imageOne.childImageSharp.fixed} />
-          <Img fixed={props.data.imageTwo.childImageSharp.fixed} />
+          <h3>Bathroom & Kitchen remodels</h3>
+          {period === "after" ? (
+            <Img
+              fixed={props.data.imageOne.childImageSharp.fixed}
+              onMouseover={setPeriod("before")}
+            />
+          ) : (
+            <Img fixed={props.data.imageTwo.childImageSharp.fixed} />
+          )}
+
           <Img fixed={props.data.imageThree.childImageSharp.fixed} />
           <Img fixed={props.data.imageFour.childImageSharp.fixed} />
+          <Img fixed={props.data.imageSeventeen.childImageSharp.fixed} />
         </div>
-        <div className={galleryStyles.stairsAndRailings}>
+        <div className={galleryStyles.diningRooms}>
           <h3>Dining Rooms Remodels</h3>
           <Img fixed={props.data.imageThirteen.childImageSharp.fixed} />
           <Img fixed={props.data.imageFourteen.childImageSharp.fixed} />
           <Img fixed={props.data.imageFifteen.childImageSharp.fixed} />
+        </div>
+        <div className={galleryStyles.backyards}>
+          <h3>Backyard Remodels</h3>
+          <Img fixed={props.data.imageNineteen.childImageSharp.fixed} />
+          <Img fixed={props.data.imageEighteen.childImageSharp.fixed} />
+          <Img fixed={props.data.imageTwenty.childImageSharp.fixed} />
+          <Img fixed={props.data.imageTwentyOne.childImageSharp.fixed} />
+          <Img fixed={props.data.imageTwentyTwo.childImageSharp.fixed} />
         </div>
         <div className={galleryStyles.stairsAndRailings}>
           <h3>Stairs & Railings</h3>
@@ -114,6 +132,24 @@ export const pageQuery = graphql`
       ...fixedImage
     }
     imageSixteen: file(relativePath: { eq: "photos/fences.jpeg" }) {
+      ...fixedImage
+    }
+    imageSeventeen: file(relativePath: { eq: "photos/kitchen1.jpeg" }) {
+      ...fixedImage
+    }
+    imageEighteen: file(relativePath: { eq: "photos/landscaping.jpeg" }) {
+      ...fixedImage
+    }
+    imageNineteen: file(relativePath: { eq: "photos/landscaping1.jpeg" }) {
+      ...fixedImage
+    }
+    imageTwenty: file(relativePath: { eq: "photos/landscaping2.jpeg" }) {
+      ...fixedImage
+    }
+    imageTwentyOne: file(relativePath: { eq: "photos/landscaping3.jpeg" }) {
+      ...fixedImage
+    }
+    imageTwentyTwo: file(relativePath: { eq: "photos/landscaping4.jpeg" }) {
       ...fixedImage
     }
   }

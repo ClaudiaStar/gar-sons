@@ -10,7 +10,7 @@ const Services = () => {
     <Layout>
       <SEO title="Gallery" />
       <div className={contactStyles.main}>
-        <div className={contactStyles.imageGradient}>
+        <div>
           <ContactImg />
         </div>
 

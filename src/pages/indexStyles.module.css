@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap");
 
 .heroImg {
   height: 80vh;
@@ -6,6 +6,7 @@
 }
 
 .heroText {
+  font-family: "Oxygen", sans-serif;
   position: absolute;
   top: 30vh;
   text-align: center;
@@ -20,7 +21,7 @@
 }
 
 .companyName {
-  font-family: "Rye";
+  font-family: "Playfair Display", serif;
 }
 
 @media screen and (max-device-width: 725px) {

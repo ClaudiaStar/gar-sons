@@ -1,0 +1,11 @@
+.ContactImg {
+  width: 50vw;
+  height: 100vh;
+}
+
+@media screen and (max-device-width: 1024px) {
+  .ContactImg {
+    width: 100vw;
+    height: 20vh;
+  }
+}

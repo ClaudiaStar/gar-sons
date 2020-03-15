@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oxygen|Playfair+Display&display=swap");
 
 /* General Menu Classes */
 
@@ -21,7 +21,7 @@
 }
 
 .Name {
-  font-family: "Rye";
+  font-family: "Playfair Display", serif;
   font-size: x-large;
   grid-area: name;
   justify-self: center;
@@ -86,7 +86,7 @@
 
 /* Large screen styles */
 
-@media /* desktop */ (min-width: 995px) {
+@media /* desktop */ (min-width: 1025px) {
   .Burger {
     display: none;
   }

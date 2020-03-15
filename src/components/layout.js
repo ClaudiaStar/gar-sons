@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { TransitionPortal } from "gatsby-plugin-transition-link"
 
 import Header from "./header"
-import Footer from "./footer"
+// import Footer from "./footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -30,9 +30,9 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <TransitionPortal>
+        {/* <TransitionPortal>
           <Footer />
-        </TransitionPortal>
+        </TransitionPortal> */}
       </div>
     </React.Fragment>
   )
