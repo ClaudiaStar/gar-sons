@@ -6,6 +6,8 @@ import { motion } from "framer-motion"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Head from "../components/head"
+
 import WhoWeAre from "../components/whoweare"
 import TransitionImg1 from "../components/TransitionImg1"
 import Services from "../components/services"
@@ -36,6 +38,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
+      <Head title="Home" />
       <Img
         fluid={data.file.childImageSharp.fluid}
         className={indexStyles.heroImg}

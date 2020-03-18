@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Head from "../components/head"
+
 import galleryStyles from "./galleryStyles.module.css"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -12,6 +14,7 @@ const GalleryPage = props => {
   return (
     <Layout>
       <SEO title="Gallery" />
+      <Head title="Gallery" />
       <div className={galleryStyles.gallery}>
         <h2>OUR WORK</h2>
         <p>

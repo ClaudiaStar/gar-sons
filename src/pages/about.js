@@ -3,6 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import aboutStyles from "./aboutStyles.module.css"
+import Head from "../components/head"
 
 import AboutImg from "../components/aboutImg"
 import CallToAction from "../components/callToAction"
@@ -10,6 +11,7 @@ import CallToAction from "../components/callToAction"
 const AboutPage = () => (
   <Layout>
     <SEO title="About Gar-Sons" />
+    <Head title="About" />
     <AboutImg />
     <div className={aboutStyles.aboutDescription}>
       <h2>ABOUT GAR-SONS</h2>
