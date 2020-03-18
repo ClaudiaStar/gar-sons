@@ -85,7 +85,7 @@ const Header = () => {
             style={contactLinkStyle}
             activeStyle={activeLinkStyle}
           >
-            Contact Us
+            Get a quote!
           </AniLink>
         </div>
       </div>

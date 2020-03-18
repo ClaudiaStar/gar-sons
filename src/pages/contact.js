@@ -13,7 +13,6 @@ const Services = () => {
         <div>
           <ContactImg />
         </div>
-
         <ContactForm />
       </div>
     </Layout>
