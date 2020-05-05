@@ -55,6 +55,7 @@ const IndexPage = ({ data }) => {
           Gar-Sons Construction
         </motion.h1>
         <motion.p variants={item}>Licensed | Bonded | Insured</motion.p>
+        <motion.p variants={item}>CCB: 221601</motion.p>
       </motion.div>
       <WhoWeAre />
       <TransitionImg1 />
